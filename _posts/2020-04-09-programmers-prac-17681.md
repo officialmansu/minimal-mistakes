@@ -1,5 +1,5 @@
 ---
-title: "Programmers 연습 문제 "이상한 문자 만들기""
+title: "2018 KAKAO BLIND RECRUITMENT_비밀 지도"
 toc: true
 toc_label: "Table of Contents"
 categories:
