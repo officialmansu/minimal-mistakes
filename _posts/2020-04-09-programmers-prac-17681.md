@@ -8,8 +8,6 @@ tags:
   - Programmers.co.kr
 ---
 
-# 2018 KAKAO BLIND RECRUITMENT_비밀 지도
-
 [문제 바로가기](https://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1)
 
 ## 요지
