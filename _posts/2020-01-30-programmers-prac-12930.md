@@ -1,5 +1,5 @@
 ---
-title: "Programmers 연습 문제 "이상한 문자 만들기""
+title: "Programmers 연습 문제_이상한 문자 만들기"
 toc: true
 toc_label: "Table of Contents"
 categories:
@@ -8,7 +8,7 @@ tags:
   - Programmers.co.kr
 ---
 
-# Programmers 연습 문제 "이상한 문자 만들기"
+# Programmers 연습 문제_이상한 문자 만들기
 
 [문제 바로가기](https://programmers.co.kr/learn/courses/30/lessons/12930)
 
