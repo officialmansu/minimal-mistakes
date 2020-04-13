@@ -46,6 +46,7 @@ struct Node {
 Node를 만들었다. 다음은 간단한 Linked List를 만들어보자.
 
 ![linked-list-svg](https://officialmansu.github.io/assets/img/linked-list-svg.svg)
+<img src="https://officialmansu.github.io/assets/img/linked-list-svg.svg">
 
 ```c
 #include <stdio.h>
