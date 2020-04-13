@@ -14,11 +14,11 @@ Linked List의 특징에 대해 알아보자. 다음 그림을 보자.
 
 Array의 구조:
 
-![image-20200413004705259](introduction-of-singly-linked-list.assets/image-20200413004705259.png)
+![image-20200413004705259](./assets/img/image-20200413004705259.png)
 
 
 
-Linked List의 구조:![image-20200413004908524](introduction-of-singly-linked-list.assets/image-20200413004908524.png)
+Linked List의 구조:![image-20200413004908524](./assets/img/image-20200413004908524.png)
 
 Linked List에 대해 알아보기 전, 이를 사용하는 이유에 대해 생각해보자. 그 이유는 기존에 사용하던 방식인 Array와의 차이점을 보면 알 수 있을 것 같다.
 
@@ -45,7 +45,7 @@ struct Node {
 
 Node를 만들었다. 다음은 간단한 Linked List를 만들어보자.
 
-![linked-list-svg](/Volumes/mansu/data-structure/linked-list/linked-list-svg.svg)
+![linked-list-svg](./assets/img/linked-list-svg.svg)
 
 ```c
 #include <stdio.h>
