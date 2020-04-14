@@ -14,7 +14,7 @@ Linked List의 특징에 대해 알아보자. 다음 그림을 보자.
 
 Array의 구조:
 
-.![image-20200413004705259](https://officialmansu.github.io/assets/img/array.svg)
+![image-20200413004705259](https://officialmansu.github.io/assets/img/array.svg)
 
 
 
