@@ -14,11 +14,11 @@ Linked List의 특징에 대해 알아보자. 다음 그림을 보자.
 
 Array의 구조:
 
-.![image-20200413004705259](https://officialmansu.github.io/assets/img/image-20200413004705259.png)
+.![image-20200413004705259](https://officialmansu.github.io/assets/img/array.svg)
 
 
 
-Linked List의 구조:![image-20200413004908524](https://officialmansu.github.io/assets/img/image-20200413004908524.png)
+Linked List의 구조:![image-20200413004908524](https://officialmansu.github.io/assets/img/linked-list.svg)
 
 Linked List에 대해 알아보기 전, 이를 사용하는 이유에 대해 생각해보자. 그 이유는 기존에 사용하던 방식인 Array와의 차이점을 보면 알 수 있을 것 같다.
 
