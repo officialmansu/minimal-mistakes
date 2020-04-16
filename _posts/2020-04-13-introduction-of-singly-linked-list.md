@@ -76,3 +76,5 @@ int main(void) {
     return 0;
 }
 ```
+
+다음 글에서는 Linked List를 가지고 여러가지 실험을 해 볼 것이다.
