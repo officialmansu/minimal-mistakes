@@ -73,6 +73,10 @@ int main(void) {
     third -> data = 3;
     third -> next = NULL;
     
+    free(head);
+    free(second);
+    free(third);
+    
     return 0;
 }
 ```
