@@ -30,7 +30,7 @@ void insertFront(struct Node* node, const int data) {
 
 먼저 새로운 Node를 맨 앞에 추가해야 하는데, 그러기 위해서는 head를 임시 Node에 복사하고 head에는 매개변수로 들어온 `data`를 저장한다.
 
-![singly-linked-list-insert-front](2020-04-16-singly-linked-list-experiment.assets/singly-linked-list-insert-front.svg)
+![singly-linked-list-insert-front](https://officialmansu.github.io/assets/img/singly-linked-list-insert-front.svg)
 
 ```c
 void insertFront(struct Node* head, const int data) { // 검증
@@ -61,7 +61,7 @@ void insert(struct Node* prev_node, const int data) {
 
 먼저 새로운 `data`를 새 Node에 저장한다. 그리고 새 Node의 다음 Node를 `prev_node` 의 다음 Node로 한다. 또 `prev_node`의 다음 Node는 새 Node로 한다.
 
-![singly-linked-list-insert](2020-04-16-singly-linked-list-experiment.assets/singly-linked-list-insert.svg)
+![singly-linked-list-insert](https://officialmansu.github.io/assets/img/singly-linked-list-insert.svg)
 
 ```c
 void insert(struct Node* prev_node, const int data) {
