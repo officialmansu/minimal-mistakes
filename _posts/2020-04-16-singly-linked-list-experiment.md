@@ -24,7 +24,7 @@ tags:
 
 ```c
 void insertFront(struct Node* node, const int data) {
-	// insert code here.
+  // insert code here.
 }
 ```
 
@@ -34,16 +34,16 @@ void insertFront(struct Node* node, const int data) {
 
 ```c
 void insertFront(struct Node* head, const int data) { // 검증
-	struct Node* head_tmp = (struct Node*)malloc(sizeof(struct Node));
+  struct Node* head_tmp = (struct Node*)malloc(sizeof(struct Node));
 
-	// head를 head_tmp에 복사
-	head_tmp -> data = head -> data;
-	head_tmp -> next = head -> next;
+  // head를 head_tmp에 복사
+  head_tmp -> data = head -> data;
+  head_tmp -> next = head -> next;
 
-	// 새 data를 head에 저장
-	head -> data = data;
-	// head_tmp를 head의 다음 Node로 지정
-	head -> next = head_tmp;
+  // 새 data를 head에 저장
+  head -> data = data;
+  // head_tmp를 head의 다음 Node로 지정
+  head -> next = head_tmp;
 }
 ```
 
@@ -55,7 +55,7 @@ void insertFront(struct Node* head, const int data) { // 검증
 
 ```c
 void insert(struct Node* prev_node, const int data) {
-	// insert code here.
+  // insert code here.
 }
 ```
 
@@ -65,12 +65,12 @@ void insert(struct Node* prev_node, const int data) {
 
 ```c
 void insert(struct Node* prev_node, const int data) {
-	struct Node* node = (sizeof(struct Node))malloc(sizeof(struct Node));
+  struct Node* node = (sizeof(struct Node))malloc(sizeof(struct Node));
   
-	node -> data = data;
-	node -> next = prev_node -> next;
+  node -> data = data;
+  node -> next = prev_node -> next;
   
-	prev_node -> next = node;
+  prev_node -> next = node;
 }
 ```
 
@@ -80,7 +80,7 @@ void insert(struct Node* prev_node, const int data) {
 
 ```c
 void append(struct Node* node, const int data) {
-	// insert code here.
+  // insert code here.
 }
 ```
 
@@ -88,10 +88,10 @@ void append(struct Node* node, const int data) {
 
 ```c
 void append(struct Node* node, const int data) {
-	while(node -> next != NULL) {
-		node = node -> next;
-	}
-	insert(node, data);
+  while(node -> next != NULL) {
+    node = node -> next;
+  }
+  insert(node, data);
 }
 ```
 
