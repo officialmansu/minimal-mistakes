@@ -22,7 +22,7 @@ tags:
 
 먼저 새로운 Node를 맨 앞에 추가해야 하는데, 그러기 위해서는 새 Node를 만들고 그 Node를 head 포인터가 가리키게 만들면 된다. 다음 그림을 보자.
 
-![singly-linked-list-insert-front](https://officialmansu.github.io/assets/img/singly-linked-list-insert-front-7137680.svg)
+![singly-linked-list-insert-front](https://officialmansu.github.io/assets/img/singly-linked-list-insert-front.svg)
 
 그러기 위해서는 함수의 매개변수로 `head` 포인터의 포인터와 새 `data`를 사용해야 한다. 포인터의 포인터(이중 포인터)를 사용하는 이유는 `head` 포인터는 `int main(void)` 함수에 선언되어 있고, 우리는 `head` 포인터가 가리키는 Node를 바꾸어야 하기 때문이다. 이러한 방법으로 만들어진 코드는 다음과 같다.
 
@@ -41,7 +41,7 @@ void insertFront(struct Node** head, const int data) {
 
 먼저 새로운 `data`를 새 Node에 저장한다. 그리고 새 Node의 다음 Node를 `prev_node` 의 다음 Node로 한다. 또 `prev_node`의 다음 Node는 새 Node로 한다.
 
-![singly-linked-list-insert](https://officialmansu.github.io/assets/img/singly-linked-list-insert-7138875.svg)
+![singly-linked-list-insert](https://officialmansu.github.io/assets/img/singly-linked-list-insert.svg)
 해당 함수의 형태를 생각해보자. 먼저 매개변수로는 우리가 추가할 위치의 바로 전 Node의 포인터와 새로 추가할 값으로 생각할 수 있다. 반환 값은 `void` 이다.
 
 ```c
