@@ -28,12 +28,12 @@ tags:
 
 ```c
 void insertFront(struct Node** head, const int data) {
-	struct Node* node = (struct Node*)malloc(sizeof(struct Node)); // 새 Node생성
+  struct Node* node = (struct Node*)malloc(sizeof(struct Node)); // 새 Node생성
 
-	node -> data = data;
+  node -> data = data;
   node -> next = (*head);
   
-	(*head) = node; // 첫 번째 Node를 가리키던 포인터를 새로 만들어진 Node를 가리키도록 함
+  (*head) = node; // 첫 번째 Node를 가리키던 포인터를 새로 만들어진 Node를 가리키도록 함
 }
 ```
 
@@ -46,12 +46,12 @@ void insertFront(struct Node** head, const int data) {
 
 ```c
 void insert(struct Node* prev_node, const int data) {
-	struct Node* node = (sizeof(struct Node))malloc(sizeof(struct Node));
+  struct Node* node = (sizeof(struct Node))malloc(sizeof(struct Node));
   
-	node -> data = data;
-	node -> next = prev_node -> next; // 새 Node의 다음 Node는 삽입 위치 바로 전 Node의 다음 Node로 설정
+  node -> data = data;
+  node -> next = prev_node -> next; // 새 Node의 다음 Node는 삽입 위치 바로 전 Node의 다음 Node로 설정
   
-	prev_node -> next = node; // 삽입 위치 바로 전 Node의 다음 Node를 새 Node로 설정
+  prev_node -> next = node; // 삽입 위치 바로 전 Node의 다음 Node를 새 Node로 설정
 }
 ```
 
