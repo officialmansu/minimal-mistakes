@@ -73,11 +73,7 @@ void append(struct Node** head, const int data) {
   while(last -> next != NULL) { // 마지막 Node 검색
     last = last -> next;
   }
-  struct Node* node = (struct Node*)malloc(sizeof(struct Node)); // 새 Node생성
-  node -> data = data;
-  node -> next = NULL;
-
-  last -> next = node; // 마지막 Node에 새 Node추가
+  insert(last, data);
 }
 ```
 
