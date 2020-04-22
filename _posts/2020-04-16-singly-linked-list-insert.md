@@ -46,7 +46,7 @@ void insertFront(struct Node** head, const int data) {
 
 ```c
 void insert(struct Node* prev_node, const int data) {
-  struct Node* node = (sizeof(struct Node))malloc(sizeof(struct Node));
+  struct Node* node = (struct Node*)malloc(sizeof(struct Node));
   
   node -> data = data;
   node -> next = prev_node -> next; // 새 Node의 다음 Node는 삽입 위치 바로 전 Node의 다음 Node로 설정
