@@ -20,7 +20,7 @@
 
 Node를 삭제하려면 먼저 삭제하려는 Node의 전 Node와 검색할 값이 필요하다. 그 이유는 검색할 값이 저장된 Node를 연결고리에서 끊어내고 그 전 Node의 다음 Node를 끊어낸 Node의 다음 Node로 하면 되기 때문이다.
 
-![singly-linked-list-delete-at-middle](singly-linked-list-delete.assets/singly-linked-list-delete-at-middle.svg)
+![singly-linked-list-delete-at-middle](https://officialmansu.github.io/assets/img/singly-linked-list-delete-at-middle.svg)
 
 이를 위해서는 `head` 포인터와 검색할 값이 필요하다.
 
@@ -43,7 +43,7 @@ void removeNode(struct Node* head, const int data) {
 
 위 방법으로 맨 앞 Node를 삭제하려고 하면 세그멘테이션 오류가 발생한다. 허용되지 않은 메모리 영역에 접근했거나 허용되지 않은 접근 방법을 사용했다는 것이다. (8줄의 `prev_node` 접근 불가)따라서 새로운 방법이 필요하다. 다음 그림을 참고하자.
 
-![singly-linked-list-delete-at-front](singly-linked-list-delete.assets/singly-linked-list-delete-at-front.svg)
+![singly-linked-list-delete-at-front](https://officialmansu.github.io/assets/img/singly-linked-list-delete-at-front.svg)
 
 먼저 [맨 앞에 값 삽입하기](https://officialmansu.github.io/data%20structure/singly-linked-list-insert/#%EC%8B%A4%ED%97%98-1%EC%9D%98-1_list%EC%9D%98-%EB%A7%A8-%EC%95%9E%EC%97%90-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)에서 사용된 2중 포인터의 개념을 도입해야 한다. 그리고 `head` 포인터를 임시로 저장할 임시 포인터 변수가 필요하다. 그 이유는 `head` 포인터가 가리키는 Node를 바로 다음 Node로 바꾸어야 하며, 삭제할 Node를 검색해야 하기 때문이다.
 
@@ -94,3 +94,4 @@ void removeNode(struct Node** head, const int index) {
 }
 ```
 
+__이 글에 잘못된 내용이 있을 경우 알려주시기 바랍니다.__
