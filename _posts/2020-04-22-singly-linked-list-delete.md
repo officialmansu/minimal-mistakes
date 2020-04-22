@@ -39,7 +39,7 @@ void removeNode(struct Node* head, const int data) {
     struct Node* prev_node = NULL; // 삭제하려는 Node의 전 Node
     // head != NULL: List가 텅 비어있거나 검색할 값이 없는 경우
     while(head != NULL && head -> data != data) {
-		prev_node = head;
+        prev_node = head;
         head = head -> next;
     }
     // List가 비었거나 검색할 값이 없는 경우 함수 종료
