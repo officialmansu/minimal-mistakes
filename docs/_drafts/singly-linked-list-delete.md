@@ -32,6 +32,8 @@ void removeNode(struct Node* head, const int data) {
 		prev_node = head;
         head = head -> next;
     }
+    // List가 비었거나 검색할 값이 없는 경우 함수 종료
+    if(head == NULL) return;
     prev_node -> next = head -> next;
     free(head);
 }
@@ -39,26 +41,38 @@ void removeNode(struct Node* head, const int data) {
 
 #### 맨 앞 Node삭제하기
 
-앞선 예제로 맨 앞 Node를 삭제하려고 하면 세그멘테이션 오류가 발생한다. 허용되지 않은 메모리 영역에 접근했거나 허용되지 않은 접근 방법을 사용했다는 것이다. 따라서 /*작성 중*/
+위 방법으로 맨 앞 Node를 삭제하려고 하면 세그멘테이션 오류가 발생한다. 허용되지 않은 메모리 영역에 접근했거나 허용되지 않은 접근 방법을 사용했다는 것이다. (8줄의 `prev_node` 접근 불가)따라서 새로운 방법이 필요하다. 다음 그림을 참고하자.
 
-/*temp code*/
+![singly-linked-list-delete-at-front](singly-linked-list-delete.assets/singly-linked-list-delete-at-front.svg)
+
+먼저 [맨 앞에 값 삽입하기](https://officialmansu.github.io/data%20structure/singly-linked-list-insert/#%EC%8B%A4%ED%97%98-1%EC%9D%98-1_list%EC%9D%98-%EB%A7%A8-%EC%95%9E%EC%97%90-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)에서 사용된 2중 포인터의 개념을 도입해야 한다. 그리고 head 포인터를 임시로 저장할 임시 포인터 변수가 필요하다. 그 이유는 head 포인터가 가리키는 Node를 바로 다음 Node로 바꾸어야 하며, 삭제할 Node를 검색해야 하기 때문이다.
 
 ```c
 void removeNode(struct Node** head, const int data) {
-  struct Node* prev_node = NULL;
-  struct Node* head_tmp = *head; // 검색용, 맨 앞의 Node를 삭제(free)하기 위함
-  while(head_tmp != NULL && head_tmp -> data != data) { // List가 비어 있거나, 마지막 Node를 벗어난 상태(조건)
-    prev_node = head_tmp;
-    head_tmp = head_tmp -> next;
-  }
-  if(head_tmp == NULL) return; // if list has no value or key is not in list:
-  if(prev_node == NULL) { // delete node at front
-    *head = (*head) -> next;
+    struct Node* prev_node = NULL;
+    struct Node* head_tmp = *head; // 검색용, 맨 앞의 Node를 삭제(free)하기 위함
+    // head_tmp == NULL: List가 비었거나 검색할 값이 없는 경우
+    while(head_tmp != NULL && head_tmp -> data != data) {
+        prev_node = head_tmp;
+        head_tmp = head_tmp -> next;
+    }
+    // List가 비었거나 검색할 값이 없는 경우 함수 종료
+    if(head_tmp == NULL) return;
+    // 맨 앞 Node삭제 후 함수 종료
+    if(prev_node == NULL) {
+        /* 보류
+        free(*head);
+        *head = head_tmp -> next;
+        */
+        
+        *head = (*head) -> next;
+        free(head_tmp);
+        
+        return;
+    }
+    // 중간 Node또는 마지막 Node삭제하기
+    prev_node -> next = head_tmp -> next;
     free(head_tmp);
-    return;
-  }
-  prev_node -> next = head_tmp -> next;
-  free(head_tmp);
 }
 ```
 
