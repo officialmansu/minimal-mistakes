@@ -79,3 +79,4 @@ void append(struct Node** head, const int data) {
 
 지금까지 Singly Linked List에 값을 추가하는 여러 방법에 대해 실험해 보았다. 다음에는 값을 삭제하는 방법에 대해 실험해보자.
 
+__이 글에 잘못된 내용이 있을 경우 알려주시기 바랍니다.__
