@@ -1,3 +1,13 @@
+---
+title: "[Data Structure] 실험 2_Singly Linked List의 값 삭제하기"
+toc: true
+toc_label: "Table of Contents"
+categories:
+  - Data Structure
+tags:
+  - Linked List
+---
+
 이번에는 Singly Linked List에 있는 값을 삭제하는 실험을 해보자.
 
 ## 실험 2_값 삭제하기
