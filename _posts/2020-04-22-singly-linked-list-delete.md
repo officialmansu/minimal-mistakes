@@ -104,4 +104,28 @@ void removeNode(struct Node** head, const int index) {
 }
 ```
 
+## 실험 3_List 삭제하기
+
+List를 삭제하기 위해서는 `head` 포인터의 포인터가 필요하다. 이중 포인터를 사용하는 이유는 다음 그림을 보면 이해할 수 있다.
+
+![delete-linked-list](https://officialmansu.github.io/assets/img/delete-linked-list-1587989183510.svg)
+
+이와 같이 `free(current_node)`를 한 뒤, 그 다음 Node를 지우려면 `current_node`를 지우기 전, `next_node`라는 이름으로 다음 Node를 미리 저장해 두어야 한다.
+
+```c
+void deleteList(struct Node** head) {
+  struct Node* current_node = *head;
+  struct Node* next_node;
+  while(current_node != NULL) {
+    // 다음 Node 미리 저장
+    next_node = current_node -> next;
+    // 현재 Node 해제
+    free(current_node);
+    // 
+    current_node = next_node;
+  }
+  *head = NULL;
+}
+```
+
 __이 글에 잘못된 내용이 있을 경우 알려주시기 바랍니다.__
