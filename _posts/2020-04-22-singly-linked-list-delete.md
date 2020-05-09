@@ -28,7 +28,7 @@ tags:
 
 #### 중간 Node또는 마지막 Node삭제하기
 
-Node를 삭제하려면 먼저 삭제하려는 Node의 전 Node와 검색할 값이 필요하다. 그 이유는 검색할 값이 저장된 Node를 연결고리에서 끊어내고 그 전 Node의 다음 Node를 끊어낸 Node의 다음 Node로 하면 되기 때문이다.
+Node를 삭제하려면 먼저 삭제하려는 Node의 전 Node와 검색할 값이 필요하다. 그 이유는 검색할 값이 저장된 Node를 연결고리에서 끊어내고 그 전 Node의 다음 Node를 끊어낸 Node의 다음 Node로 해야 하기 때문이다.
 
 ![singly-linked-list-delete-at-middle](https://officialmansu.github.io/assets/img/singly-linked-list-delete-at-middle.svg)
 
