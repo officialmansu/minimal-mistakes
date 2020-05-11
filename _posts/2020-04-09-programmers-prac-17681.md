@@ -8,6 +8,8 @@ tags:
   - Programmers.co.kr
 ---
 
+> *출처: 프로그래머스 코딩 테스트 연습, [https://programmers.co.kr/learn/challenges](https://programmers.co.kr/learn/challenges)*
+
 [문제 바로가기](https://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1)
 
 ## 요지
