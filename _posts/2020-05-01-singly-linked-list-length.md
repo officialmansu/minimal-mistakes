@@ -34,7 +34,7 @@ int length(struct Node* head) {
 이렇게 구성할 경우, `head`포인터가 NULL에 도달하면 0을 반환하고, 그 값은 `length(struct Node* head)`이 된다. 따라서 `1 + length(struct Node* head)`은 0 + 1이 되어 1이 된다. 이러한 방법으로 Node의 개수를 구하면 된다.
 
 ```c
-void length(struct Node* head) {
+int length(struct Node* head) {
     if(head == NULL) return 0;
     return 1 + length(head -> next);
 }
